@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.font-sofia{
+  font-family: "Sofia Sans", sans-serif;
+}
+
+.font-rokkitt{
+  font-family: "Rokkitt", serif;
+}
+
+.isActive {
+  border-bottom: 2px solid red;
+}
