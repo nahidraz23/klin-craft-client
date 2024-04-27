@@ -93,7 +93,7 @@ const Navbar = () => {
               {user?.photoURL ? (
                 <div className="avatar">
                   <div
-                    className="w-16 mask mask-hexagon hover:cursor-pointer"
+                    className="w-12 mask mask-hexagon hover:cursor-pointer"
                     data-twe-toggle="tooltip"
                     title={`${user?.displayName}`}
                   >
@@ -102,7 +102,7 @@ const Navbar = () => {
                 </div>
               ) : (
                 <div className="avatar">
-                  <div className="w-16 mask mask-hexagon">
+                  <div className="w-14 mask mask-hexagon">
                     <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                   </div>
                 </div>
