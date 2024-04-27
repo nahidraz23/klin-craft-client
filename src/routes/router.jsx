@@ -16,11 +16,13 @@ export const router = createBrowserRouter([
         children: [
             {
                 path:'/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('http://localhost:5300/items')
             },
             {
                 path:'/allartcraft',
-                element: <AllArtCraft></AllArtCraft>
+                element: <AllArtCraft></AllArtCraft>,
+                
             },
             {
                 path:'/myartcraft',
