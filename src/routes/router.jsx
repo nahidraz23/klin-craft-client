@@ -7,6 +7,8 @@ import MyArtCraft from "../pages/MyArtCraft";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
 import AddItem from "../pages/AddItem";
+import CraftItemsDetails from "../pages/CraftItemsDetails";
+import SubCategoryDetails from "../pages/SubCategoryDetails";
 
 export const router = createBrowserRouter([
     {
@@ -22,11 +24,11 @@ export const router = createBrowserRouter([
             {
                 path:'/allartcraft',
                 element: <AllArtCraft></AllArtCraft>,
-                
+                loader: () => fetch('http://localhost:5300/items')
             },
             {
                 path:'/myartcraft',
-                element: <MyArtCraft></MyArtCraft>
+                element: <MyArtCraft></MyArtCraft>,
             },
             {
                 path: '/additem',
@@ -40,6 +42,15 @@ export const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp></SignUp>
+            },
+            {
+                path: '/craftitemsdetails/:id',
+                element: <CraftItemsDetails></CraftItemsDetails>,
+                loader: ({params}) => fetch(`http://localhost:5300/items/${params.id}`)
+            },
+            {
+                path: '/subcategorydetails',
+                element: <SubCategoryDetails></SubCategoryDetails>
             }
 
         ]

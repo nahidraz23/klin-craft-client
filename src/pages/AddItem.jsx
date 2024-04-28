@@ -104,11 +104,11 @@ const AddItem = () => {
                                 <span className="label-text">Process Time</span>
                             </div>
                             <select name="processing_time" className="select select-bordered">
-                                <option value={1}>1 Hour</option>
-                                <option value={2}>2 Hour</option>
-                                <option value={4}>4 Hour</option>
-                                <option value={1}>1 Day</option>
-                                <option value={7}>7 Days</option>
+                                <option value={"1 Hour"}>1 Hour</option>
+                                <option value={"2 Hour"}>2 Hour</option>
+                                <option value={"4 Hour"}>4 Hour</option>
+                                <option value={"1 Day"}>1 Day</option>
+                                <option value={"7 Days"}>7 Days</option>
                             </select>
                         </label>
                     </div>
