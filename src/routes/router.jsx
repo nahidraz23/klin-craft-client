@@ -9,6 +9,7 @@ import SignUp from "../pages/SignUp";
 import AddItem from "../pages/AddItem";
 import CraftItemsDetails from "../pages/CraftItemsDetails";
 import SubCategoryDetails from "../pages/SubCategoryDetails";
+import UpdatePage from "../pages/UpdatePage";
 
 export const router = createBrowserRouter([
     {
@@ -52,6 +53,11 @@ export const router = createBrowserRouter([
                 path: '/subcategorydetails/:subcategory_Name',
                 element: <SubCategoryDetails></SubCategoryDetails>,
                 loader: ({params}) => fetch(`http://localhost:5300/subcategorydetails/${params.subcategory_Name}`) 
+            },
+            {
+                path: `/updatepage/:id`,
+                element: <UpdatePage></UpdatePage>,
+                loader: ({params}) => fetch(`http://localhost:5300/items/${params.id}`)
             }
 
         ]

@@ -7,10 +7,44 @@ import {
     Button,
     Rating
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
 
-const MyCraftItem = ({ item }) => {
+const MyCraftItem = ({ item, loadedItem, setloadedItem }) => {
 
     const { _id, item_name, short_description, price, rating, image, customization, stock_status } = item;
+
+    // Handle for delete 
+    const handleDeleteItem = id => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5300/myartcraft/${id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            const remaining = loadedItem.filter(item => item._id !== id);
+                            setloadedItem(remaining);
+                        }
+                    })
+
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your item has been deleted.",
+                    icon: "success"
+                });
+            }
+        });
+    }
 
     return (
         <div>
@@ -54,19 +88,22 @@ const MyCraftItem = ({ item }) => {
                 </CardBody>
                 <CardFooter className="pt-0 flex justify-between">
                     <Button
+                        onClick={() => handleDeleteItem(_id)}
                         ripple={false}
                         fullWidth={false}
                         className="bg-gray-200 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
                     >
                         Delete
                     </Button>
-                    <Button
-                        ripple={false}
-                        fullWidth={false}
-                        className="bg-gray-200 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-                    >
-                        Update
-                    </Button>
+                    <Link to={`/updatepage/${_id}`}>
+                        <Button
+                            ripple={false}
+                            fullWidth={false}
+                            className="bg-gray-200 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
+                        >
+                            Update
+                        </Button>
+                    </Link>
                 </CardFooter>
             </Card>
         </div>

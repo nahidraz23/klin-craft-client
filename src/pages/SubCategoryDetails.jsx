@@ -1,5 +1,5 @@
-import CraftItem from "../components/CraftItem";
 import { useLoaderData } from "react-router-dom";
+import SubCategoryCard from "../components/SubCategoryCard";
 
 const SubCategoryDetails = () => {
 
@@ -9,7 +9,7 @@ const SubCategoryDetails = () => {
         <div className="min-h-[calc(100vh-296px)]">
             <div className="grid grid-cols-3 gap-10 container mx-auto">
                 {
-                    loadedItems.map((item, index) => <CraftItem key={index} item={item}></CraftItem>)
+                    loadedItems.map((item, index) => <SubCategoryCard key={index} item={item}></SubCategoryCard>)
                 }
             </div>
         </div>
