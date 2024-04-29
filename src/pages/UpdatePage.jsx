@@ -36,7 +36,7 @@ const UpdatePage = () => {
             if (data.modifiedCount > 0) {
                 Swal.fire({
                     title: "Success",
-                    text: "Coffee Updated successfully",
+                    text: "Item Updated successfully",
                     icon: "success",
                     confirmButtonText: "ok",
                 });

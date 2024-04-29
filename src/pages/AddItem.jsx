@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProviderComponent";
+import Swal from "sweetalert2";
 
 const AddItem = () => {
 
@@ -32,7 +33,16 @@ const AddItem = () => {
             body: JSON.stringify(item)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: "Success",
+                        text: "Item add successfully",
+                        icon: "success",
+                        confirmButtonText: "ok",
+                    });
+                }
+            })
     }
 
     return (
