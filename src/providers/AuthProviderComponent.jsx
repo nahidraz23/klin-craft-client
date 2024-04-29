@@ -9,6 +9,15 @@ const AuthProviderComponent = ({children}) => {
     
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [loadedItem, setloadedItem] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5300/items')
+        .then(res => res.json())
+        .then(data => {
+            setloadedItem(data)
+        })
+    },[])
 
     //Create user
     const createUser = (email, password) => {
@@ -51,6 +60,7 @@ const AuthProviderComponent = ({children}) => {
         signOutUser,
         googleLogin,
         githubLogin,
+        loadedItem,
     }
 
     //Observer

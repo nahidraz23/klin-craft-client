@@ -49,8 +49,9 @@ export const router = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:5300/items/${params.id}`)
             },
             {
-                path: '/subcategorydetails',
-                element: <SubCategoryDetails></SubCategoryDetails>
+                path: '/subcategorydetails/:subcategory_Name',
+                element: <SubCategoryDetails></SubCategoryDetails>,
+                loader: ({params}) => fetch(`http://localhost:5300/subcategorydetails/${params.subcategory_Name}`) 
             }
 
         ]

@@ -9,7 +9,6 @@ const MyArtCraft = () => {
     const email = user?.email;
 
     const [loadedItem, setloadedItem] = useState([])
-    console.log(loadedItem)
 
     useEffect(() => {
         fetch(`http://localhost:5300/myCraft/${email}`)

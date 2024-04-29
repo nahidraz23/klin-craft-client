@@ -1,5 +1,4 @@
 import { useLoaderData } from "react-router-dom";
-import CraftItem from "../components/CraftItem";
 import ItemList from "../components/ItemList";
 
 const AllArtCraft = () => {
