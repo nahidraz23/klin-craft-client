@@ -14,7 +14,7 @@ module.exports = withMT ({
     require('@tailwindcss/forms')({ strategy: 'class' })
   ],
   daisyui: {
-    themes: ["night", "cupcake"],
+    themes: ["night", "light"],
   },
 })
 

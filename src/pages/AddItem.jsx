@@ -44,13 +44,13 @@ const AddItem = () => {
                 }
             })
     }
-
+  
     return (
-        <form onSubmit={handleAddItem} className="flex flex-col items-center">
+        <form onSubmit={handleAddItem} className="flex flex-col items-center my-10">
             <div>
-                <h1 className="text-3xl font-bold text-center">Add Item</h1>
+                <h1 className="text-5xl font-bold text-center my-5 font-sofia">Add Item</h1>
             </div>
-            <div className="w-1/2 flex flex-col  gap-6">
+            <div className="w-1/2 flex flex-col border-2 border-black rounded-2xl p-5 gap-6">
                 {/* first row */}
                 <div className="flex justify-between gap-5">
                     <div className="flex-1">

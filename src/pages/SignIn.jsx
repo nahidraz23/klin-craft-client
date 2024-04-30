@@ -52,8 +52,8 @@ const SignIn = () => {
     }
 
     return ( 
-        <div className="flex w-full justify-center min-h-[calc(100vh-296px)]">
-            <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-gray-50 dark:text-gray-800">
+        <div className="flex w-full justify-center min-h-[calc(100vh-296px)] my-10">
+            <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-gray-50 dark:text-gray-800 border-2 border-black">
                 <h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
                 <p className="text-sm text-center dark:text-gray-600">Do not have account?
                     <a href="/signup" rel="noopener noreferrer" className="focus:underline hover:underline"> Sign up here</a>

@@ -25,10 +25,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/allartcraft',
-                element:
-                    <PrivateRoutes>
-                        <AllArtCraft></AllArtCraft>
-                    </PrivateRoutes>
+                element: <AllArtCraft></AllArtCraft>
                 ,
                 loader: () => fetch('http://localhost:5300/items')
             },
@@ -41,7 +38,10 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/additem',
-                element: <AddItem></AddItem>
+                element: 
+                <PrivateRoutes>
+                    <AddItem></AddItem>
+                </PrivateRoutes>
 
             },
             {

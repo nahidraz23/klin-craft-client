@@ -6,7 +6,7 @@ const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
 
   //Theme Change 
-  const [theme, setTheme] = useState('cupcake');
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
     localStorage.setItem('theme', theme)
@@ -19,7 +19,7 @@ const Navbar = () => {
       setTheme("night");
     }
     else {
-      setTheme("cupcake")
+      setTheme("light")
     }
   }
 
