@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5300/items')
+                loader: () => fetch('https://kiln-craft-server-cc88w3ni0-nahid-razs-projects.vercel.app/items')
             },
             {
                 path: '/allartcraft',
