@@ -1,7 +1,7 @@
 # KLINCRAFT
 
 Live Site:
-- <a href="https://klin-craft.web.app/ rel="nofollow">KLINCRAFT</a>
+- <a href="https://klin-craft.web.app/" rel="nofollow">KLINCRAFT</a>
 
 ## Features
 
