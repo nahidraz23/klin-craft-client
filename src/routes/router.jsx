@@ -10,6 +10,7 @@ import AddItem from "../pages/AddItem";
 import CraftItemsDetails from "../pages/CraftItemsDetails";
 import SubCategoryDetails from "../pages/SubCategoryDetails";
 import UpdatePage from "../pages/UpdatePage";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -18,18 +19,25 @@ export const router = createBrowserRouter([
         errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
-                path:'/',
+                path: '/',
                 element: <Home></Home>,
                 loader: () => fetch('http://localhost:5300/items')
             },
             {
-                path:'/allartcraft',
-                element: <AllArtCraft></AllArtCraft>,
+                path: '/allartcraft',
+                element:
+                    <PrivateRoutes>
+                        <AllArtCraft></AllArtCraft>
+                    </PrivateRoutes>
+                ,
                 loader: () => fetch('http://localhost:5300/items')
             },
             {
-                path:'/myartcraft',
-                element: <MyArtCraft></MyArtCraft>,
+                path: '/myartcraft',
+                element:
+                    <PrivateRoutes>
+                        <MyArtCraft></MyArtCraft>
+                    </PrivateRoutes>,
             },
             {
                 path: '/additem',
@@ -46,21 +54,24 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/craftitemsdetails/:id',
-                element: <CraftItemsDetails></CraftItemsDetails>,
-                loader: ({params}) => fetch(`http://localhost:5300/items/${params.id}`)
+                element:
+                    <PrivateRoutes>
+                        <CraftItemsDetails></CraftItemsDetails>
+                    </PrivateRoutes>,
+                loader: ({ params }) => fetch(`http://localhost:5300/items/${params.id}`)
             },
             {
                 path: '/subcategorydetails/:subcategory_Name',
                 element: <SubCategoryDetails></SubCategoryDetails>,
-                loader: ({params}) => fetch(`http://localhost:5300/subcategorydetails/${params.subcategory_Name}`) 
+                loader: ({ params }) => fetch(`http://localhost:5300/subcategorydetails/${params.subcategory_Name}`)
             },
             {
                 path: `/updatepage/:id`,
                 element: <UpdatePage></UpdatePage>,
-                loader: ({params}) => fetch(`http://localhost:5300/items/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5300/items/${params.id}`)
             }
 
         ]
-        
+
     }
 ])

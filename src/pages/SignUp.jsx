@@ -30,10 +30,7 @@ const SignUp = () => {
 
 
         createUser(email, password)
-        .then(result => {
-            console.log(result.user);
-            navigate('/');
-
+        .then(() => {
             fetch("http://localhost:5300/users", {
                 method: 'POST',
                 headers: {
@@ -43,9 +40,12 @@ const SignUp = () => {
             })
             .then(res => res.json())
             .then(data => console.log(data))
+
+            toast.success("Registration successfull.");
+            navigate(location?.state ? location.state : '/')
         })
         .catch(error => {
-            console.log(error.message)
+            toast.error(error.message);
         })
     }
 

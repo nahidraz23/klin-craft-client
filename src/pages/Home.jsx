@@ -3,6 +3,7 @@ import Banner from "../components/Banner/Banner";
 import CraftItem from "../components/CraftItem";
 import ArtandCraftCategory from "../components/ArtandCraftCategory";
 import NewsLetter from "../components/NewsLetter";
+import BestSellerSection from "../components/BestSellerSection";
 
 const Home = () => {
 
@@ -27,6 +28,10 @@ const Home = () => {
                 {/* Newsletter section */}
                 <div className="my-10">
                     <NewsLetter></NewsLetter>
+                </div>
+                {/* Best seller section */}
+                <div className="container mx-auto my-10">
+                    <BestSellerSection></BestSellerSection>
                 </div>
             </div>
         </div>
