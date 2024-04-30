@@ -12,7 +12,7 @@ const CraftItemsDetails = () => {
             <div className="p-10 bg-[#8f8f8f] bg-opacity-40">
                 <h1 className="text-2xl font-rokkitt text-center uppercase">{subcategory_Name}</h1>
             </div>
-            <div className="flex container mx-auto gap-10 p-10">
+            <div className="flex flex-col lg:flex-row container mx-auto gap-10 p-10">
                 <div className="">
                     <img
                         className="w-[770px] h-[524px]"

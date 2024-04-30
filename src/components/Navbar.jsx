@@ -96,7 +96,7 @@ const Navbar = () => {
           </div>
           <Link
             to={"/"}
-            className="text-4xl uppercase"
+            className="lg:text-4xl uppercase"
           >
             KlinCraft
           </Link>

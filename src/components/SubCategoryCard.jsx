@@ -19,7 +19,7 @@ const SubCategoryCard = ({ item }) => {
     }
 
     return (
-        <Card className="w-full max-w-[26rem] shadow-lg p-4 rounded-2xl">
+        <Card className="w-auto lg:max-w-[26rem] shadow-lg p-4 rounded-2xl">
             <CardHeader floated={false} color="blue-gray" className="rounded-2xl">
                 <img
                     src={image}

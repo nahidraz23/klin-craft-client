@@ -10,7 +10,7 @@ const Home = () => {
     const craftItems = useLoaderData();
 
     return (
-        <div>
+        <div className="overflow-hidden">
             <Banner></Banner>
             <div className="">
                 <div className="mt-10">
