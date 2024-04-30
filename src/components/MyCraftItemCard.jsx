@@ -10,7 +10,7 @@ import {
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2';
 
-const MyCraftItem = ({ item, loadedItem, setloadedItem }) => {
+const MyCraftItemCard = ({ item, loadedItem, setloadedItem }) => {
 
     const { _id, item_name, short_description, price, rating, image, customization, stock_status } = item;
 
@@ -110,4 +110,4 @@ const MyCraftItem = ({ item, loadedItem, setloadedItem }) => {
     );
 };
 
-export default MyCraftItem;
+export default MyCraftItemCard;
