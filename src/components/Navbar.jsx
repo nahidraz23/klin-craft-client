@@ -34,7 +34,7 @@ const Navbar = () => {
   };
 
   const navLinks = (
-    <div className="flex gap-10 text-3xl font-sofia">
+    <div className="flex flex-col lg:flex-row gap-10 text-3xl font-sofia">
       <NavLink
         to={"/"}
         className={({ isActive }) => (isActive ? "isActive" : "")}
@@ -89,7 +89,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navLinks}
             </ul>

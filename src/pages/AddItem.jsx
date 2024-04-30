@@ -50,9 +50,9 @@ const AddItem = () => {
             <div>
                 <h1 className="text-5xl font-bold text-center my-5 font-sofia">Add Item</h1>
             </div>
-            <div className="w-1/2 flex flex-col border-2 border-black rounded-2xl p-5 gap-6">
+            <div className="lg:w-1/2 flex flex-col border-2 border-black rounded-2xl p-5 gap-6">
                 {/* first row */}
-                <div className="flex justify-between gap-5">
+                <div className="flex flex-col lg:flex-row justify-between gap-5">
                     <div className="flex-1">
                         <label className="form-control w-full max-w-lg">
                             <div className="label">
@@ -71,7 +71,7 @@ const AddItem = () => {
                     </div>
                 </div>
                 {/* second row */}
-                <div className="flex justify-between gap-5">
+                <div className="flex flex-col lg:flex-row justify-between gap-5">
                     <div className="flex-1">
                         <label className="form-control w-full max-w-lg">
                             <div className="label">
@@ -96,7 +96,7 @@ const AddItem = () => {
                     </div>
                 </div>
                 {/* third row */}
-                <div className="flex justify-between gap-5">
+                <div className="flex flex-col lg:flex-row  justify-between gap-5">
                     <div className="flex-1">
                         <label className="form-control w-full max-w-lg">
                             <div className="label">
@@ -124,7 +124,7 @@ const AddItem = () => {
                     </div>
                 </div>
                 {/* fourth row */}
-                <div className="flex justify-between gap-5">
+                <div className="flex flex-col lg:flex-row  justify-between gap-5">
                     <div className="flex-1">
                         <label className="form-control w-full max-w-lg">
                             <div className="label">
@@ -146,7 +146,7 @@ const AddItem = () => {
                     </div>
                 </div>
                 {/* fifth row */}
-                <div className="flex justify-between gap-5">
+                <div className="flex flex-col lg:flex-row  justify-between gap-5">
                     <div className="flex-1">
                         <label className="form-control w-full max-w-lg">
                             <div className="label">
