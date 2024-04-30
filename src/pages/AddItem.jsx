@@ -25,7 +25,7 @@ const AddItem = () => {
 
         const item = { item_name, short_description, price, rating, customization, processing_time, stock_status, email, name, image, subcategory_Name };
 
-        fetch('http://localhost:5300/items', {
+        fetch('http://kiln-craft-server.vercel.app/items', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

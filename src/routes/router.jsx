@@ -21,12 +21,12 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('https://kiln-craft-server-cc88w3ni0-nahid-razs-projects.vercel.app/items')
+                loader: () => fetch('http://kiln-craft-server.vercel.app/items')
             },
             {
                 path: '/allartcraft',
                 element: <AllArtCraft></AllArtCraft>,
-                loader: () => fetch('http://localhost:5300/items')
+                loader: () => fetch('http://kiln-craft-server.vercel.app/items')
             },
             {
                 path: '/myartcraft',
@@ -57,17 +57,17 @@ export const router = createBrowserRouter([
                     <PrivateRoutes>
                         <CraftItemsDetails></CraftItemsDetails>
                     </PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5300/items/${params.id}`)
+                loader: ({ params }) => fetch(`http://kiln-craft-server.vercel.app/items/${params.id}`)
             },
             {
                 path: '/subcategorydetails/:subcategory_Name',
                 element: <SubCategoryDetails></SubCategoryDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5300/subcategorydetails/${params.subcategory_Name}`)
+                loader: ({ params }) => fetch(`http://kiln-craft-server.vercel.app/subcategorydetails/${params.subcategory_Name}`)
             },
             {
                 path: `/updatepage/:id`,
                 element: <UpdatePage></UpdatePage>,
-                loader: ({ params }) => fetch(`http://localhost:5300/items/${params.id}`)
+                loader: ({ params }) => fetch(`http://kiln-craft-server.vercel.app/items/${params.id}`)
             }
 
         ]

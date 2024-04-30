@@ -13,7 +13,7 @@ const MyArtCraft = () => {
     
 
     useEffect(() => {
-        fetch(`http://localhost:5300/myCraft/${email}`)
+        fetch(`http://kiln-craft-server.vercel.app/myCraft/${email}`)
             .then(res => res.json())
             .then(data => {
                 setloadedItem(data)

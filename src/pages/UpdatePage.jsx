@@ -24,7 +24,7 @@ const UpdatePage = () => {
 
         const updatedItem = { item_name, short_description, price, rating, customization, processing_time, stock_status, image, subcategory_Name };
 
-        fetch(`http://localhost:5300/items/${_id}`, {
+        fetch(`http://kiln-craft-server.vercel.app/items/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

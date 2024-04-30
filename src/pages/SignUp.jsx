@@ -31,7 +31,7 @@ const SignUp = () => {
 
         createUser(email, password)
         .then(() => {
-            fetch("http://localhost:5300/users", {
+            fetch("http://kiln-craft-server.vercel.app/users", {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

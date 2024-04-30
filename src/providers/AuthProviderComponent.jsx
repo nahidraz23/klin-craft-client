@@ -12,7 +12,7 @@ const AuthProviderComponent = ({children}) => {
     const [loadedItem, setloadedItem] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5300/items')
+        fetch('http://kiln-craft-server.vercel.app/items')
         .then(res => res.json())
         .then(data => {
             setloadedItem(data)
