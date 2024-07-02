@@ -16,9 +16,7 @@ Make sure you have the following installed:
 
 ### Clone the Repository
 
-Certainly! Here’s the rewritten section for your `README.md` file:
 
-```markdown
 ## Installation
 
 Follow these steps to set up the project locally.
@@ -78,30 +76,29 @@ Or using yarn:
 ```bash
 yarn dev
 ```
-```
 
 Replace "your-username" and "your-repo-name" with your actual GitHub username and repository name. This section includes detailed steps for installing dependencies, setting up environment variables, and running the project.
 
 
 ## Features
 
-1. Gallery Showcase:
+- **Gallery Showcase:
 Visual Feast: Explore a rich gallery showcasing exquisite ceramic and pottery pieces from talented artisans worldwide.
 Inspiration Hub: Immerse yourself in a diverse array of styles, techniques, and forms to fuel your creativity.
 
-2. Tutorial Library:
+- **Tutorial Library:
 Skill Development: Access an extensive library of tutorials covering fundamental to advanced techniques in ceramics and pottery.
 Interactive Learning: Follow detailed guides, watch video tutorials, and engage with hands-on projects to enhance your skills.
 
-3. Community Engagement:
+- **Community Engagement:
 Connect & Share: Join a vibrant community of ceramics and pottery enthusiasts, exchange ideas, and share your creations.
 Support Network: Receive feedback, advice, and encouragement from fellow artists and experts to nurture your passion.
 
-4. Resource Directory:
+- **Resource Directory:
 Tools & Materials: Discover a curated directory of essential tools, materials, and resources tailored for ceramicists and potters.
 Supplier Recommendations: Find reputable suppliers for clay, glazes, kilns, and other equipment to support your artistic endeavors.
 
-5. Events & Collaborations:
+- **Events & Collaborations:
 Stay Informed: Keep track of upcoming workshops, exhibitions, and events in the ceramics and pottery community.
 Opportunities for Collaboration: Explore potential collaborations with fellow artists, organizations, and institutions to expand your horizons.
 
